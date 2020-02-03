@@ -1,22 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://blog.lyw1024.online/</id>
-    <title>匿迹_lyw</title>
-    <updated>2020-02-03T18:06:19.001Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://blog.lyw1024.online/"/>
-    <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://blog.lyw1024.online/images/avatar.png</logo>
-    <icon>https://blog.lyw1024.online/favicon.ico</icon>
-    <rights>All rights reserved 2020, 匿迹_lyw</rights>
-    <entry>
-        <title type="html"><![CDATA[技术要点整理]]></title>
-        <id>https://blog.lyw1024.online/post/ji-zhu-yao-dian-zheng-li</id>
-        <link href="https://blog.lyw1024.online/post/ji-zhu-yao-dian-zheng-li">
-        </link>
-        <updated>2020-02-03T16:34:36.000Z</updated>
-        <content type="html"><![CDATA[<p>博客刚刚搭建，先在此列出一些提纲，最初的文章将是对过去的总结。</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>技术要点整理 | 匿迹_lyw</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.lyw1024.online//favicon.ico?v=1580753156014">
+<link rel="stylesheet" href="https://blog.lyw1024.online//styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="博客刚刚搭建，先在此列出一些提纲，最初的文章将是对过去的总结。
+* 基础技术篇
+JAVA 集合，IO， 多线程
+源码解读，IO发展，NIO，Netty，多线程和单线程比较， 锁的使用，sap，线程数和cpu核心数测试优化
+
+JAVA虚拟机
+..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.lyw1024.online/">
+        <img src="https://blog.lyw1024.online//images/avatar.png?v=1580753156014" class="site-logo">
+        <h1 class="site-title">匿迹_lyw</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://blog.lyw1024.online//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">技术要点整理</h2>
+            <div class="post-date">2020-02-04</div>
+            
+            <div class="post-content" v-pre>
+              <p>博客刚刚搭建，先在此列出一些提纲，最初的文章将是对过去的总结。</p>
 <h2 id="基础技术篇">* 基础技术篇</h2>
 <h3 id="java-集合io-多线程">JAVA 集合，IO， 多线程</h3>
 <pre><code>源码解读，IO发展，NIO，Netty，多线程和单线程比较， 锁的使用，sap，线程数和cpu核心数测试优化
@@ -106,6 +190,37 @@ Xapian，solr，es 的区别，适用数据量级。
 <pre><code>排序
 反射
 </code></pre>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
