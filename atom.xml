@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-02-04T15:50:34.844Z</updated>
+    <updated>2020-02-04T15:56:28.001Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -44,9 +44,9 @@
 忽略列表需要添加 /Gridea/output/， 用于处理多层Repository可能引发的问题，<br>
 git.7z打包的是Gridea/output/.git目录</p>
 </blockquote>
+<p><strong>还原/添加设备 步骤</strong>：</p>
 <blockquote>
-<p><strong>还原/添加设备 步骤</strong>：<br>
-1.安装运行Gridea，<br>
+<p>1.安装运行Gridea，<br>
 2.clone仓库github-pages-storage，<br>
 3.修改Gridea中配置如下图：<br>
 <img src="https://upload-images.jianshu.io/upload_images/6967949-7e8c7aa8f7e3b4b5.png" alt="" loading="lazy"><br>
