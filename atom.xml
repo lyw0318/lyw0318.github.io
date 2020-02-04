@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-02-04T14:12:40.318Z</updated>
+    <updated>2020-02-04T15:50:34.844Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -16,17 +16,45 @@
         <link href="https://blog.lyw1024.online/post/jing-tai-bo-ke-da-jian">
         </link>
         <updated>2020-02-04T11:20:45.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...<br>
-<em>本文为本博客的技术方案说明。</em></p>
+        <summary type="html"><![CDATA[<p><em>本文简单介绍本博客的搭建方案说明。其本质是Github Pages，使用Gridea来解决样式维护和文章编写体验差的问题。</em></p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...<br>
-<em>本文为本博客的技术方案说明。</em></p>
+        <content type="html"><![CDATA[<p><em>本文简单介绍本博客的搭建方案说明。其本质是Github Pages，使用Gridea来解决样式维护和文章编写体验差的问题。</em></p>
 <!-- more -->
 <h3 id="准备工作"><strong>准备工作</strong></h3>
 <blockquote>
-<p>G</p>
+<p>Github账号，Gridea</p>
+</blockquote>
+<h3 id="要点记录"><strong>要点记录</strong></h3>
+<blockquote>
+<p>由于Gridea为中文网站并且搭建过程简单，在此不做赘述。<a href="https://gridea.dev/docs/">文档链接</a><br>
+只记录和解决2个问题：<br>
+1.Gridea未提供较好的多设备编辑功能，*.github.io仓库并不足以支撑多设备的需求。<br>
+2.Gridea由于文件服务也依托于github，对于44+M的文件，下载较为困难。</p>
+</blockquote>
+<h3 id="下载地址"><strong>下载地址</strong></h3>
+<p><a href="http://download.lyw1024.online/storage/Gridea.Setup.0.9.1.exe">Gridea.Setup.0.9.1.exe</a><em>(为本站提供,带宽同样有限)</em></p>
+<h3 id="多设备编辑"><strong>多设备编辑</strong></h3>
+<blockquote>
+<p>Gridea文档上的解决方案个人认为有些麻烦，原文如下：<br>
+<em>&quot;目前，你可以通过将博客源文件夹（默认是 ~/Documents/Gridea）通过 OneDrive 或其他类似网盘同步工具进行文件备份与同步&quot;</em><br>
+云端备份虽然已经很普及了，但是毕竟又增加了新的搭建流程，而Github本身就有上传项目的功能。<br>
+所以我新建用另一个Repository命名为github-pages-storage来存储源文件夹（~/Documents/Gridea）。<br>
+目录结构如下：<br>
+<img src="https://upload-images.jianshu.io/upload_images/6967949-8ea1e669cc5c28a3.png" alt="" loading="lazy"><br>
+忽略列表需要添加 /Gridea/output/， 用于处理多层Repository可能引发的问题，<br>
+git.7z打包的是Gridea/output/.git目录</p>
+</blockquote>
+<blockquote>
+<p><strong>还原/添加设备 步骤</strong>：<br>
+1.安装运行Gridea，<br>
+2.clone仓库github-pages-storage，<br>
+3.修改Gridea中配置如下图：<br>
+<img src="https://upload-images.jianshu.io/upload_images/6967949-7e8c7aa8f7e3b4b5.png" alt="" loading="lazy"><br>
+4.保存之后Gridea会自动重启<br>
+5.点击Gridea预览，然后在github-pages-storage\Gridea\会出现out目录<br>
+6.解压git.7z到github-pages-storage\Gridea\output目录<br>
+7.完成，可以正常编写博客<br>
+8.为了保证每次添加新设备不会回档，工作进行完之后务必进行github-pages-storage推送。</p>
 </blockquote>
 ]]></content>
     </entry>
