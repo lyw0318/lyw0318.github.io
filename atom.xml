@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-02-03T18:23:41.622Z</updated>
+    <updated>2020-02-04T12:23:29.374Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://blog.lyw1024.online/images/avatar.png</logo>
     <icon>https://blog.lyw1024.online/favicon.ico</icon>
     <rights>All rights reserved 2020, 匿迹_lyw</rights>
+    <entry>
+        <title type="html"><![CDATA[静态博客搭建]]></title>
+        <id>https://blog.lyw1024.online/post/jing-tai-bo-ke-da-jian</id>
+        <link href="https://blog.lyw1024.online/post/jing-tai-bo-ke-da-jian">
+        </link>
+        <updated>2020-02-04T11:20:45.000Z</updated>
+        <content type="html"><![CDATA[<p><em>本文为本博客的技术方案说明。</em></p>
+<h3 id="准备工作"><strong>准备工作</strong></h3>
+<blockquote>
+<p>G</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[技术要点整理]]></title>
         <id>https://blog.lyw1024.online/post/ji-zhu-yao-dian-zheng-li</id>
