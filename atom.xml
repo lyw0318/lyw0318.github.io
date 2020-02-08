@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-02-08T15:43:44.020Z</updated>
+    <updated>2020-02-08T15:55:37.002Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://blog.lyw1024.online/images/avatar.png</logo>
     <icon>https://blog.lyw1024.online/favicon.ico</icon>
     <rights>All rights reserved 2020, 匿迹_lyw</rights>
+    <entry>
+        <title type="html"><![CDATA[阿里云OSS接入&管理方案]]></title>
+        <id>https://blog.lyw1024.online/post/a-li-yun-oss-jie-ru-andguan-li-fang-an</id>
+        <link href="https://blog.lyw1024.online/post/a-li-yun-oss-jie-ru-andguan-li-fang-an">
+        </link>
+        <updated>2020-02-08T15:50:15.000Z</updated>
+        <content type="html"><![CDATA[<p>本文是基于对oss的理解整理的对象服务器在使用中的权限管理，资源清理的方案。</p>
+<!-- more id 4-->
+<h2 id="oss的意义">oss的意义</h2>
+<p>oss即Object Storage Service， 直译为 对象存储服务。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[IDEA搭建Python/Django开发环境]]></title>
         <id>https://blog.lyw1024.online/post/idea-da-jian-pythondjango-kai-fa-huan-jing</id>
