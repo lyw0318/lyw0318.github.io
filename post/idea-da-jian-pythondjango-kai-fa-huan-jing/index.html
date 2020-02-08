@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | 匿迹_lyw</title>
+<title>IDEA搭建Python/Django开发环境 | 匿迹_lyw</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,16 +18,12 @@
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
+    <meta name="description" content="由于本人需要开发java和python，所以选择了对两种开发支持都较好的IDEA。本文记录IDEA的python开发设置。
 
-🏠 关于本站
-  个人认证技术博客。 记录一些关于互联网及IT技术相关内容
-👨‍💻 博主是谁
-  software engineer： 匿迹_lyw
-⛹ 兴趣爱好
-  游戏，宅，读书
-📬 ..." />
+版本介绍：
+
+IDEA： IntelliJ IDEA 2019.3.2 (Ultimate Edition)
+py..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -99,25 +95,58 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <h2 class="post-title">IDEA搭建Python/Django开发环境</h2>
+            <div class="post-date">2020-02-08</div>
             
             <div class="post-content" v-pre>
-              <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>  个人认证技术博客。 记录一些关于互联网及IT技术相关内容</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>  software engineer： 匿迹_lyw</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>  游戏，宅，读书</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>  wechat： yaowulee<br>
-  请说明来意</p>
+              <p>由于本人需要开发java和python，所以选择了对两种开发支持都较好的IDEA。本文记录IDEA的python开发设置。</p>
+<!-- more -->
+<h2 id="版本介绍">版本介绍：</h2>
+<ul>
+<li>IDEA： IntelliJ IDEA 2019.3.2 (Ultimate Edition)</li>
+<li>python：3.8.1(x86)</li>
+<li>Django：3.0.3<br>
+<em>理论上本文档可用于任意python/django版本</em></li>
+</ul>
+<h2 id="主要搭建步骤">主要搭建步骤：</h2>
+<ul>
+<li>1.官网下载python</li>
+<li>2.安装IDEA的python插件</li>
+<li>3.创建/克隆 django 工程</li>
+<li>4.配置虚拟环境</li>
+</ul>
+<h2 id="在window环境下会遇到的问题">在window环境下会遇到的问题：</h2>
+<ul>
+<li>
+<p>1.缺少mysqlclient无法启动<br>
+会提示vc++的一些错误，本质上市需要那些库进行Build。对window熟悉者可自行判断如何解决。<br>
+本文推荐解决方案：<br>
+<strong>直接下载已编译的window版安装程序</strong><br>
+下载地址：<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient">pythonlibs</a><br>
+下载完成后，到mysqlclient‑1.4.6‑cp38‑cp38‑win32.whl目录运行如下命令安装：<br>
+python -m pip install mysqlclient‑1.4.6‑cp38‑cp38‑win32.whl<br>
+如果安装仍然失败<br>
+则检查版本<br>
+cp38代表python版本需要3.8，<br>
+win32代表适用于32位window操作系统<br>
+如果版本无误<br>
+则检查文件权限<br>
+window我们不做过多深入，简单提升当前用户权限为完全控制</p>
+<p>完成。</p>
+</li>
+</ul>
 
             </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.lyw1024.online/post/java-xu-ni-ji">
+                  <h3 class="post-title">
+                    深入理解JAVA虚拟机
+                  </h3>
+                </a>
+              </div>
             
 
             
