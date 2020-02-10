@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-02-10T17:19:18.905Z</updated>
+    <updated>2020-02-10T17:22:37.001Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -22,12 +22,12 @@
 <!-- more -->
 <p>Paguridae产品功能：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5313361"><label class="task-list-item-label" for="task-item-5313361"> 登录/注册(一期)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5468029"><label class="task-list-item-label" for="task-item-5468029"> 颜龄打分/综合评测(一期)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-653207"><label class="task-list-item-label" for="task-item-653207"> 用户中心(一期)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2813790"><label class="task-list-item-label" for="task-item-2813790"> 圈子(二期)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6538600"><label class="task-list-item-label" for="task-item-6538600"> 好友系统(二期)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5063169"><label class="task-list-item-label" for="task-item-5063169"> 聊天系统(缺省)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1286632"><label class="task-list-item-label" for="task-item-1286632"> 登录/注册(一期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4622666"><label class="task-list-item-label" for="task-item-4622666"> 颜龄打分/综合评测(一期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-524812"><label class="task-list-item-label" for="task-item-524812"> 用户中心(一期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4882967"><label class="task-list-item-label" for="task-item-4882967"> 圈子(二期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8683627"><label class="task-list-item-label" for="task-item-8683627"> 好友系统(二期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7413534"><label class="task-list-item-label" for="task-item-7413534"> 聊天系统(缺省)</label></li>
 </ul>
 <p>启动： 2020/02/10<br>
 一期截止： 2020/02/20</p>
@@ -69,27 +69,6 @@
 <ul>
 <li>对于产品级的实践，有时候我们会更希望是app，因为依赖于浏览器的web页，不适合调用音视频设备，并且不太适合使用频次高，流程较为复杂的功能，并且用户粘性较差。app方面选择更为开放的android。当然，如果有需要商业化的需要，可在进行ios的调研。</li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于AI赋能的真相]]></title>
-        <id>https://blog.lyw1024.online/post/guan-yu-ai-fu-neng-de-zhen-xiang</id>
-        <link href="https://blog.lyw1024.online/post/guan-yu-ai-fu-neng-de-zhen-xiang">
-        </link>
-        <updated>2020-02-08T15:59:07.000Z</updated>
-        <content type="html"><![CDATA[<p>讲解关于AI赋能的真实层级。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[阿里云OSS接入&管理方案]]></title>
-        <id>https://blog.lyw1024.online/post/a-li-yun-oss-jie-ru-andguan-li-fang-an</id>
-        <link href="https://blog.lyw1024.online/post/a-li-yun-oss-jie-ru-andguan-li-fang-an">
-        </link>
-        <updated>2020-02-08T15:50:15.000Z</updated>
-        <content type="html"><![CDATA[<p>本文是基于对oss的理解整理的对象服务器在使用中的权限管理，资源清理的方案。</p>
-<!-- more id 4-->
-<h2 id="oss的意义">oss的意义</h2>
-<p>oss即Object Storage Service， 直译为 对象存储服务。</p>
 ]]></content>
     </entry>
     <entry>
@@ -136,26 +115,6 @@ window我们不做过多深入，简单提升当前用户权限为完全控制</
 <p>完成。</p>
 </li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[深入理解JAVA虚拟机]]></title>
-        <id>https://blog.lyw1024.online/post/java-xu-ni-ji</id>
-        <link href="https://blog.lyw1024.online/post/java-xu-ni-ji">
-        </link>
-        <updated>2020-02-04T15:58:24.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<h2 id="关于jvm的作用和定位">关于JVM的作用和定位</h2>
-<blockquote>
-<p>首先说明一下jdk的构成：<br>
-<img src="http://res.lyw1024.online/blog/post/2/1.jpg" alt="" loading="lazy"><br>
-<strong>JVM</strong>(Java Virtual Machine)：<br>
-java虚拟机<br>
-<strong>JRE</strong>(Java Runtime Environment)：<br>
-java运行时环境<br>
-<strong>JDK</strong>(Java Development Kit)：<br>
-java开发</p>
-</blockquote>
 ]]></content>
     </entry>
     <entry>
