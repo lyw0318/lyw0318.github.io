@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-02-10T17:18:42.640Z</updated>
+    <updated>2020-02-10T17:19:18.905Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://blog.lyw1024.online/favicon.ico</icon>
     <rights>All rights reserved 2020, 匿迹_lyw</rights>
     <entry>
-        <title type="html"><![CDATA[Paguridae项目进度文档]]></title>
+        <title type="html"><![CDATA[Paguridae项目文档]]></title>
         <id>https://blog.lyw1024.online/post/paguridae-xiang-mu-jin-du-wen-dang</id>
         <link href="https://blog.lyw1024.online/post/paguridae-xiang-mu-jin-du-wen-dang">
         </link>
@@ -22,12 +22,12 @@
 <!-- more -->
 <p>Paguridae产品功能：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-16903"><label class="task-list-item-label" for="task-item-16903"> 登录/注册(一期)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9655876"><label class="task-list-item-label" for="task-item-9655876"> 颜龄打分/综合评测(一期)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4219039"><label class="task-list-item-label" for="task-item-4219039"> 用户中心(一期)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8248282"><label class="task-list-item-label" for="task-item-8248282"> 圈子(二期)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3886409"><label class="task-list-item-label" for="task-item-3886409"> 好友系统(二期)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3785689"><label class="task-list-item-label" for="task-item-3785689"> 聊天系统(缺省)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5313361"><label class="task-list-item-label" for="task-item-5313361"> 登录/注册(一期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5468029"><label class="task-list-item-label" for="task-item-5468029"> 颜龄打分/综合评测(一期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-653207"><label class="task-list-item-label" for="task-item-653207"> 用户中心(一期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2813790"><label class="task-list-item-label" for="task-item-2813790"> 圈子(二期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6538600"><label class="task-list-item-label" for="task-item-6538600"> 好友系统(二期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5063169"><label class="task-list-item-label" for="task-item-5063169"> 聊天系统(缺省)</label></li>
 </ul>
 <p>启动： 2020/02/10<br>
 一期截止： 2020/02/20</p>
