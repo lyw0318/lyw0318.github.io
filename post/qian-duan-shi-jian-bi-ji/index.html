@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>阿里云OSS接入&amp;管理方案 | 匿迹_lyw</title>
+<title>前端实践笔记 | 匿迹_lyw</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,12 +18,12 @@
 
 
 
-    <meta name="description" content="本文是基于对oss的理解整理的对象服务器在使用中的权限管理，资源清理的方案。
+    <meta name="description" content="作为后端开发，工作上未必会用到前端东西。但是自己实践一些想法或者技术时，难免会需要做一些前端展示。本文将整理记录一些我认为比较重要的东西，由于主要是协助后端的功能完整，所以将以服务于实践为主。
 
-oss的意义
-oss即Object Storage Service， 直译为 对象存储服务。
-..." />
-    <meta name="keywords" content="方案" />
+web前端
+
+web前端最为常用，打包和发布..." />
+    <meta name="keywords" content="笔记" />
   </head>
   <body>
     <div id="app" class="main">
@@ -94,21 +94,41 @@ oss即Object Storage Service， 直译为 对象存储服务。
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">阿里云OSS接入&amp;管理方案</h2>
-            <div class="post-date">2020-02-08</div>
+            <h2 class="post-title">前端实践笔记</h2>
+            <div class="post-date">2020-02-10</div>
             
             <div class="post-content" v-pre>
-              <p>本文是基于对oss的理解整理的对象服务器在使用中的权限管理，资源清理的方案。</p>
-<!-- more id 4-->
-<h2 id="oss的意义">oss的意义</h2>
-<p>oss即Object Storage Service， 直译为 对象存储服务。</p>
+              <p>作为后端开发，工作上未必会用到前端东西。但是自己实践一些想法或者技术时，难免会需要做一些前端展示。本文将整理记录一些我认为比较重要的东西，由于主要是协助后端的功能完整，所以将以服务于实践为主。</p>
+<!-- more -->
+<h2 id="web前端">web前端</h2>
+<ul>
+<li>web前端最为常用，打包和发布流程也最为简洁，所以作为第一选择。</li>
+</ul>
+<h3 id="原生框架选择">原生/框架选择</h3>
+<ul>
+<li>原生代码，编写较为繁琐，胜在对开发环境的依耐性弱，适合独立api的测试/展示</li>
+<li>框架使用可以简化DOM操作，数据绑定等，比较适合流程就为复杂的情况。</li>
+</ul>
+<h3 id="reactvue">react/vue</h3>
+<ul>
+<li>两者都是目前较为流行的框架，vue文档更为细致，并且体系更符合国内的思维，由国人开发和维护，更易学习，所以优先选择vue</li>
+</ul>
+<h3 id="要点记录">要点记录</h3>
+<ul>
+<li><strong>前端的import/export</strong><br>
+由于web前端一般来说，会有html/css/JavaScript三者混用等，所以import相较于后端有时候并不能完全等同。</li>
+</ul>
+<h2 id="android">Android</h2>
+<ul>
+<li>对于产品级的实践，有时候我们会更希望是app，因为依赖于浏览器的web页，不适合调用音视频设备，并且不太适合使用频次高，流程较为复杂的功能，并且用户粘性较差。app方面选择更为开放的android。当然，如果有需要商业化的需要，可在进行ios的调研。</li>
+</ul>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://blog.lyw1024.online/tag/lzDTlX4XI" class="tag">
-                    方案
+                  <a href="https://blog.lyw1024.online/tag/_n-AqWHZt" class="tag">
+                    笔记
                   </a>
                 
               </div>
@@ -116,9 +136,9 @@ oss即Object Storage Service， 直译为 对象存储服务。
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://blog.lyw1024.online/post/idea-da-jian-pythondjango-kai-fa-huan-jing">
+                <a href="https://blog.lyw1024.online/post/guan-yu-ai-fu-neng-de-zhen-xiang">
                   <h3 class="post-title">
-                    IDEA搭建Python/Django开发环境
+                    关于AI赋能的真相
                   </h3>
                 </a>
               </div>
