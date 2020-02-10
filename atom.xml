@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-02-08T16:00:33.482Z</updated>
+    <updated>2020-02-10T17:02:23.823Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -10,6 +10,33 @@
     <logo>https://blog.lyw1024.online/images/avatar.png</logo>
     <icon>https://blog.lyw1024.online/favicon.ico</icon>
     <rights>All rights reserved 2020, 匿迹_lyw</rights>
+    <entry>
+        <title type="html"><![CDATA[Paguridae项目进度文档]]></title>
+        <id>https://blog.lyw1024.online/post/paguridae-xiang-mu-jin-du-wen-dang</id>
+        <link href="https://blog.lyw1024.online/post/paguridae-xiang-mu-jin-du-wen-dang">
+        </link>
+        <updated>2020-02-10T16:24:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>本文用于记录Paguridae项目的开发计划和开发进度。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本文用于记录Paguridae项目的开发计划和开发进度。</p>
+<!-- more -->
+<p>Paguridae产品功能：</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4625772"><label class="task-list-item-label" for="task-item-4625772"> 登录/注册(一期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5801603"><label class="task-list-item-label" for="task-item-5801603"> 颜龄打分/综合评测(一期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5169929"><label class="task-list-item-label" for="task-item-5169929"> 用户中心(一期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2289859"><label class="task-list-item-label" for="task-item-2289859"> 圈子(二期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3822703"><label class="task-list-item-label" for="task-item-3822703"> 好友系统(二期)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3003264"><label class="task-list-item-label" for="task-item-3003264"> 聊天系统(缺省)</label></li>
+</ul>
+<p>启动： 2020/02/10<br>
+一期截止： 2020/02/20</p>
+<ul>
+<li>2020/02/10：<br>
+完成前端web项目搭建</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[阿里云OSS接入&管理方案]]></title>
         <id>https://blog.lyw1024.online/post/a-li-yun-oss-jie-ru-andguan-li-fang-an</id>
