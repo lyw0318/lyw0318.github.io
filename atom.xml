@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-02-16T17:15:03.694Z</updated>
+    <updated>2020-02-16T17:24:09.073Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -32,8 +32,8 @@ swapoff /opt/swap    # 卸载/opt/swap文件
 <pre><code>/etc/fstab  # 挂载列表
 /etc/sysctl.conf    #系统参数
 </code></pre>
-<p>##操作步骤：<br>
-目标：设置swap为4G</p>
+<h2 id="操作步骤">操作步骤：</h2>
+<p>目标：设置swap为4G</p>
 <ul>
 <li>
 <p>1.查看内存：<br>
@@ -76,7 +76,8 @@ vi /etc/fstab<br>
 <li>
 <p>7.设置操作系统swap使用权重：<br>
 vi /etc/sysctl.conf<br>
-找到vm.swappiness修改值，如果没有就添加一行，本次设置：<br>
+找到vm.swappiness，vm.swappiness取值范围[0，100]，值越大代表越积极使用swap<br>
+修改值，如果没有就添加一行，本次设置：<br>
 vm.swappiness=60<br>
 完成，可选择重启查看是否设置成功。</p>
 </li>

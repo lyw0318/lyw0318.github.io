@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://blog.lyw1024.online//favicon.ico?v=1581873144068">
+<link rel="shortcut icon" href="https://blog.lyw1024.online//favicon.ico?v=1581873836375">
 <link rel="stylesheet" href="https://blog.lyw1024.online//styles/main.css">
 
 
@@ -32,7 +32,7 @@ fallocate -l 2G /o..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://blog.lyw1024.online/">
-        <img src="https://blog.lyw1024.online//images/avatar.png?v=1581873144068" class="site-logo">
+        <img src="https://blog.lyw1024.online//images/avatar.png?v=1581873836375" class="site-logo">
         <h1 class="site-title">匿迹_lyw</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -97,6 +97,9 @@ fallocate -l 2G /o..." />
             <h2 class="post-title">CentOS-7的Swap Space设置</h2>
             <div class="post-date">2020-02-17</div>
             
+              <div class="feature-container" style="background-image: url('http://res.lyw1024.online/blog/covers/centos-7.png')">
+              </div>
+            
             <div class="post-content" v-pre>
               <p>今天自己想跑一个java程序，但是由于测试机器为单核2G的配置，压力甚大，于是决定通过增加虚拟内存的方式来临时解决。</p>
 <!-- more -->
@@ -112,8 +115,8 @@ swapoff /opt/swap    # 卸载/opt/swap文件
 <pre><code>/etc/fstab  # 挂载列表
 /etc/sysctl.conf    #系统参数
 </code></pre>
-<p>##操作步骤：<br>
-目标：设置swap为4G</p>
+<h2 id="操作步骤">操作步骤：</h2>
+<p>目标：设置swap为4G</p>
 <ul>
 <li>
 <p>1.查看内存：<br>
@@ -156,7 +159,8 @@ vi /etc/fstab<br>
 <li>
 <p>7.设置操作系统swap使用权重：<br>
 vi /etc/sysctl.conf<br>
-找到vm.swappiness修改值，如果没有就添加一行，本次设置：<br>
+找到vm.swappiness，vm.swappiness取值范围[0，100]，值越大代表越积极使用swap<br>
+修改值，如果没有就添加一行，本次设置：<br>
 vm.swappiness=60<br>
 完成，可选择重启查看是否设置成功。</p>
 </li>
