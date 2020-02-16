@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>前端实践笔记 | 匿迹_lyw</title>
+<title>CentOS-7的Swap Space设置 | 匿迹_lyw</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,12 +18,12 @@
 
 
 
-    <meta name="description" content="作为后端开发，工作上未必会用到前端东西。但是自己实践一些想法或者技术时，难免会需要做一些前端展示。本文将整理记录一些我认为比较重要的东西，由于主要是协助后端的功能完整，所以将以服务于实践为主。
+    <meta name="description" content="今天自己想跑一个java程序，但是由于测试机器为单核2G的配置，压力甚大，于是决定通过增加虚拟内存的方式来临时解决。
 
-web前端
-
-web前端最为常用，打包和发布..." />
-    <meta name="keywords" content="笔记" />
+需要使用的命令清单：
+free -h     # 查看内存(包括swap)使用情况
+fallocate -l 2G /o..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -94,51 +94,82 @@ web前端最为常用，打包和发布..." />
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">前端实践笔记</h2>
-            <div class="post-date">2020-02-10</div>
+            <h2 class="post-title">CentOS-7的Swap Space设置</h2>
+            <div class="post-date">2020-02-17</div>
             
             <div class="post-content" v-pre>
-              <p>作为后端开发，工作上未必会用到前端东西。但是自己实践一些想法或者技术时，难免会需要做一些前端展示。本文将整理记录一些我认为比较重要的东西，由于主要是协助后端的功能完整，所以将以服务于实践为主。</p>
+              <p>今天自己想跑一个java程序，但是由于测试机器为单核2G的配置，压力甚大，于是决定通过增加虚拟内存的方式来临时解决。</p>
 <!-- more -->
-<h2 id="web前端">web前端</h2>
+<h3 id="需要使用的命令清单">需要使用的命令清单：</h3>
+<pre><code>free -h     # 查看内存(包括swap)使用情况
+fallocate -l 2G /opt/swap   # 创建/opt/swap文件并申请2G占用空间
+chmod 600 /opt/swap     # 设置/opt/swap文件权限，只运行root用户读写
+mkswap /opt/swap    # 设置/opt/swap文件为swap类型
+swapon /opt/swap    # 装载/opt/swap文件
+swapoff /opt/swap    # 卸载/opt/swap文件
+</code></pre>
+<h3 id="需要查看修改的配置">需要查看/修改的配置：</h3>
+<pre><code>/etc/fstab  # 挂载列表
+/etc/sysctl.conf    #系统参数
+</code></pre>
+<p>##操作步骤：<br>
+目标：设置swap为4G</p>
 <ul>
-<li>web前端最为常用，打包和发布流程也最为简洁，所以作为第一选择。</li>
-</ul>
-<h3 id="原生框架选择">原生/框架选择</h3>
-<ul>
-<li>原生代码，编写较为繁琐，胜在对开发环境的依耐性弱，适合独立api的测试/展示</li>
-<li>框架使用可以简化DOM操作，数据绑定等，比较适合流程就为复杂的情况。</li>
-</ul>
-<h3 id="reactvue">react/vue</h3>
-<ul>
-<li>两者都是目前较为流行的框架，vue文档更为细致，并且体系更符合国内的思维，由国人开发和维护，更易学习，所以优先选择vue</li>
-</ul>
-<h3 id="要点记录">要点记录</h3>
-<ul>
-<li><strong>前端的import/export</strong><br>
-由于web前端一般来说，会有html/css/JavaScript三者混用等，所以import相较于后端有时候并不能完全等同。</li>
-</ul>
-<h2 id="android">Android</h2>
-<ul>
-<li>对于产品级的实践，有时候我们会更希望是app，因为依赖于浏览器的web页，不适合调用音视频设备，并且不太适合使用频次高，流程较为复杂的功能，并且用户粘性较差。app方面选择更为开放的android。当然，如果有需要商业化的需要，可在进行ios的调研。</li>
+<li>
+<p>1.查看内存：<br>
+free -h<br>
+发现swap的total不为1G而used为0，说明系统已经设置有swap<br>
+那么扩展内存有两种选择：卸载现有swap并装载一个4G的swap，或者直接添加一个3G的swap。<br>
+由于used=0，所以我选择先卸载再添加，卸载步骤2-3选择直接添加可略过这几步。</p>
+</li>
+<li>
+<p>2.查看当前swap文件，并删除当前的记录<br>
+vi /etc/fstab<br>
+找到swap内容为<br>
+/www/swap    swap    swap    defaults    0 0<br>
+所以当前swap文件为/www/swap<br>
+删除记录</p>
+</li>
+<li>
+<p>3.卸载当前swap文件<br>
+swapoff /www/swap<br>
+卸载完成，此时可以再次查看内存，swap.total将为0</p>
+</li>
+<li>
+<p>4.创建新的swap文件，本次设置4G大小<br>
+fallocate -l 4G /opt/swap<br>
+chmod 600 /opt/swap<br>
+mkswap /opt/swap<br>
+完成swap文件创建</p>
+</li>
+<li>
+<p>5.装载swap文件<br>
+swapon /opt/swap<br>
+此时在此使用查看命令已经可以看到swap.total=4G，但重启后会失效</p>
+</li>
+<li>
+<p>6.添加文件记录：<br>
+vi /etc/fstab<br>
+文件最后添加一行,如果之前/www/swap没卸载也可直接添加：<br>
+/opt/swap    swap    swap    defaults    0 0</p>
+</li>
+<li>
+<p>7.设置操作系统swap使用权重：<br>
+vi /etc/sysctl.conf<br>
+找到vm.swappiness修改值，如果没有就添加一行，本次设置：<br>
+vm.swappiness=60<br>
+完成，可选择重启查看是否设置成功。</p>
+</li>
 </ul>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://blog.lyw1024.online/tag/_n-AqWHZt" class="tag">
-                    笔记
-                  </a>
-                
-              </div>
-            
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://blog.lyw1024.online/post/idea-da-jian-pythondjango-kai-fa-huan-jing">
+                <a href="https://blog.lyw1024.online/post/qian-duan-shi-jian-bi-ji">
                   <h3 class="post-title">
-                    IDEA搭建Python/Django开发环境
+                    前端实践笔记
                   </h3>
                 </a>
               </div>
