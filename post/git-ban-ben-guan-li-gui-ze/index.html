@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Git版本管理规则 | 匿迹_lyw</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.lyw1024.online//favicon.ico?v=1584377779269">
+<link rel="stylesheet" href="https://blog.lyw1024.online//styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="本文仅为本人及本人团队使用git版本控制的使用规则，并非Git唯一使用方案。Git本身并不具有固定正确的用法，主要依赖使用者理解版本控制，分支，变更节点等核心思想，自行定制使用方案。如读者对本方案有异议或愿意进行一些交流，可联系我。
+由于本..." />
+    <meta name="keywords" content="规则" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.lyw1024.online/">
+        <img src="https://blog.lyw1024.online//images/avatar.png?v=1584377779269" class="site-logo">
+        <h1 class="site-title">匿迹_lyw</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      <br><img src="https://static.dy208.cn/o_1dfilp8ruo521thr1hvf18ji17soa.png">
+<a href="http://www.beian.miit.gov.cn/"  style="color:#fff" target="_blank">京ICP备18057549号-1</a><br>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://blog.lyw1024.online//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Git版本管理规则</h2>
+            <div class="post-date">2020-03-16</div>
+            
+            <div class="post-content" v-pre>
+              <p>本文仅为本人及本人团队使用git版本控制的使用规则，并非Git唯一使用方案。Git本身并不具有固定正确的用法，主要依赖使用者理解版本控制，分支，变更节点等核心思想，自行定制使用方案。如读者对本方案有异议或愿意进行一些交流，可联系我。<br>
+由于本人开发的部分产品会分为不同渠道有时候会有功能上的细微不同，所以，与github主张的单个版本输出的模式有细微区别，<strong>切勿多套规则同时使用</strong>。</p>
+<!-- more -->
+<h1 id="分支类型">分支类型</h1>
+<h2 id="master分支">Master分支：</h2>
+<p>一般来说master分支是每一个git仓库创建的第一个分支，一般也会在未来作为最新的稳定(发布)分支。<br>
+用于发布重大版本，是git仓库对<strong>生产环境</strong>输出版本的唯一分支。</p>
+<h2 id="develop分支">Develop分支：</h2>
+<p>开发分支，或者我将它称为开发合并分支，新功能开发完成之后最终需要合并到的分支，从Master分支创建。</p>
+<h2 id="release分支">Release分支：</h2>
+<p>预发布分支作为提交测试环境的分支，用于发布测试版本，是git仓库对<strong>线上测试环境</strong>输出版本的唯一分支，一般从Develop分支创建，<strong>本分支不会有直接的代码修改</strong>。</p>
+<h2 id="feature分支">Feature分支：</h2>
+<p>功能分支，用于开发新功能，一般从Develop分支创建，也可从Develop历史分叉点创建。</p>
+<h2 id="fixbug分支">Fixbug分支：</h2>
+<p>bug修复分支，用于修复bug的分支，一般不从Develop分支直接创建，而在Develop历史分叉点创建。<br>
+<em>注：Develop历史分叉点 是指在这个点上创建了别的分支(Master/Release/其他)。</em></p>
+<h1 id="其他规则">其他规则：</h1>
+<ul>
+<li>Develop上创建新分支(Master/Release/其他)<strong>必须添加tag</strong>，记录Develop历史分叉点</li>
+<li>Fixbug分支的创建尽可能从最早的Develop历史分叉点的tag处创建，而不能从Develop直接创建。</li>
+<li>Feature分支的创建一般从Develop创建，如果已知已发布的Release版需要添加上该功能，可从Develop历史分叉点创建。</li>
+<li>Feature分支已从Develop创建，但已发布(测试/生产)，则使用cherry-pick嫁接到已发布的分支。</li>
+</ul>
+<h1 id="命名规则">命名规则：</h1>
+<ul>
+<li>Master分支：master</li>
+<li>Develop分支：dev</li>
+<li>Release分支：release-$渠道-$version (例: release-wx-0.0.1)</li>
+<li>Feature分支：feature-$功能-$author (例: feature-account-lyw)</li>
+<li>Fixbug分支：fixbug-$Bug编号-$author (例: fixbug-3001-lyw)</li>
+<li>Tag：tag-$分叉分支-$version (例: tag-release-wx-0.0.1)</li>
+</ul>
+<h1 id="log编写">log编写：</h1>
+<ul>
+<li>log需要写明更新的内容，或修复的bug，尽量不要做空白log提交，也不做无意义提交。</li>
+<li>本地提交碎片化严重的情况，优先rebase整理好后再考虑推送到远端。</li>
+</ul>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.lyw1024.online/tag/C7bEy3vFp" class="tag">
+                    规则
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.lyw1024.online/post/kai-fa-gui-fan">
+                  <h3 class="post-title">
+                    程序开发命名及日志规则
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
