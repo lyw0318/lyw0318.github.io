@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-03-16T13:47:08.890Z</updated>
+    <updated>2020-03-16T13:53:43.631Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -36,8 +36,7 @@
 <li>统一说明：<br>
 <strong>1</strong>.不使用无持久化记录的控制台输出；<br>
 <strong>2</strong>.for循环中尽量减少低等级(debug，info)的打印信息；<br>
-<strong>3</strong>.注释明确规范，表述清楚，英文注释不可忽略英文语法错误；<br>
-<strong>4</strong>.多个单词用驼峰式命名；</li>
+<strong>3</strong>.日志需适当添加文字说明，不直接log.info(obj.toString())；</li>
 <li>DEBUG等级:<br>
 测试环境保留，生产环境关闭，业务进行中数据实时状态，辅助反馈bug的分析解决，试运营阶段会处于打开状态。</li>
 <li>INFO等级:<br>
