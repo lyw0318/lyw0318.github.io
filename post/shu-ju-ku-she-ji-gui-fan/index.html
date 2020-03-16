@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>IDEA搭建Python/Django开发环境 | 匿迹_lyw</title>
+<title>数据库命名及设计规则 | 匿迹_lyw</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,13 +18,12 @@
 
 
 
-    <meta name="description" content="由于本人需要开发java和python，所以选择了对两种开发支持都较好的IDEA。本文记录IDEA的python开发设置。
-
-版本介绍：
-
-IDEA： IntelliJ IDEA 2019.3.2 (Ultimate Edition)
-py..." />
-    <meta name="keywords" content="实践" />
+    <meta name="description" content="
+数据库命名规范
+实体：
+1.本文中仅指来源于产品文档描述的，包括项目，系统，模块，属性等。不包含程序编写中的概率，如：class，funtion，object 不属于本文描述中的实体。
+2.英文表示使用单数描述，下文提到可使用复数时使用复..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -96,66 +95,52 @@ py..." />
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">IDEA搭建Python/Django开发环境</h2>
-            <div class="post-date">2020-02-08</div>
-            
-              <div class="feature-container" style="background-image: url('http://res.lyw1024.online/blog/covers/intellij-idea.png')">
-              </div>
+            <h2 class="post-title">数据库命名及设计规则</h2>
+            <div class="post-date">2020-03-14</div>
             
             <div class="post-content" v-pre>
-              <p>由于本人需要开发java和python，所以选择了对两种开发支持都较好的IDEA。本文记录IDEA的python开发设置。</p>
-<!-- more -->
-<h2 id="版本介绍">版本介绍：</h2>
-<ul>
-<li>IDEA： IntelliJ IDEA 2019.3.2 (Ultimate Edition)</li>
-<li>python：3.8.1(x86)</li>
-<li>Django：3.0.3<br>
-<em>理论上本文档可用于任意python/django版本</em></li>
-</ul>
-<h2 id="主要搭建步骤">主要搭建步骤：</h2>
-<ul>
-<li>1.官网下载python</li>
-<li>2.安装IDEA的python插件</li>
-<li>3.创建/克隆 django 工程</li>
-<li>4.配置虚拟环境</li>
-</ul>
-<h2 id="在window环境下会遇到的问题">在window环境下会遇到的问题：</h2>
-<ul>
-<li>
-<p>1.缺少mysqlclient无法启动<br>
-会提示vc++的一些错误，本质上市需要那些库进行Build。对window熟悉者可自行判断如何解决。<br>
-本文推荐解决方案：<br>
-<strong>直接下载已编译的window版安装程序</strong><br>
-下载地址：<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient">pythonlibs</a><br>
-下载完成后，到mysqlclient‑1.4.6‑cp38‑cp38‑win32.whl目录运行如下命令安装：<br>
-python -m pip install mysqlclient‑1.4.6‑cp38‑cp38‑win32.whl<br>
-如果安装仍然失败<br>
-则检查版本<br>
-cp38代表python版本需要3.8，<br>
-win32代表适用于32位window操作系统<br>
-如果版本无误<br>
-则检查文件权限<br>
-window我们不做过多深入，简单提升当前用户权限为完全控制</p>
-<p>完成。</p>
-</li>
-</ul>
+              <!-- more -->
+<h1 id="数据库命名规范">数据库命名规范</h1>
+<h2 id="实体">实体：</h2>
+<p><strong>1</strong>.本文中仅指来源于产品文档描述的，包括项目，系统，模块，属性等。不包含程序编写中的概率，如：class，funtion，object 不属于本文描述中的实体。<br>
+<strong>2</strong>.<strong>英文表示使用单数描述</strong>，下文提到可使用复数时使用复数，其他情况一律使用单数。组合其他单词使用时部分工具报语法警告不必理会。</p>
+<h2 id="统一说明">统一说明：</h2>
+<p><strong>1</strong>.使用26个英文字母 (区分大小写) 和0-9的自然数 (一般不需要) 加下划线 ‘_’ 组成；<br>
+<strong>2</strong>.命名简洁明确，忽略英文语法；<br>
+<strong>3</strong>.注释明确规范，表述清楚，英文注释不可忽略英文语法错误；<br>
+<strong>4</strong>.多个单词用下划线 ‘_’ 分隔；<br>
+<strong>5</strong>.一个项目一个数据库，多个项目慎用同一个数据库；<br>
+<strong>6</strong>.非专有名词使用小写。专有名词或广泛认可的缩写可使用大写（日活： DAU）</p>
+<h2 id="库名">库名：</h2>
+<p><strong>$数据用途-$环境</strong><br>
+（例： 书法项目的测试环境库： calligraphy-test）</p>
+<h2 id="表名">表名：</h2>
+<p><strong>t_$系统_$实体</strong><br>
+（例： 账号系统登录表： t_account_auth）</p>
+<h2 id="视图">视图：</h2>
+<p><strong>v_$实体_$附加信息</strong><br>
+（例： 所有及格的学生： v_student_passed）</p>
+<h2 id="字段">字段：</h2>
+<p><strong>1</strong>.主键一律使用 <strong>数值型&quot;id&quot;</strong>；<br>
+数值型： int，unsgined int， bigint， unsgined bigint<br>
+<strong>2</strong>.<strong>不使用数据库关键字作为字段名</strong>；<br>
+<strong>3</strong>.<strong>不使用泛意义单词</strong>；<br>
+比如：用户系统中表1存储｛昵称，头像，自我描述｝，<br>
+不使用 t_user_info表示基本信息，而使用t_user_face/t_user_show表示数据为展示信息。<br>
+<strong>4</strong>.<strong>单条记录中存储多值使用复数</strong>，比如：</p>
+<h1 id="关系型数据库设计规则">关系型数据库设计规则</h1>
+<p>待补充</p>
+<h1 id="非关系型数据库设计规则">非关系型数据库设计规则</h1>
+<p>待补充</p>
 
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://blog.lyw1024.online/tag/wdp-TO8U6" class="tag">
-                    实践
-                  </a>
-                
-              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://blog.lyw1024.online/post/jing-tai-bo-ke-da-jian">
+                <a href="https://blog.lyw1024.online/post/centos-7-de-swap-space-she-zhi">
                   <h3 class="post-title">
-                    静态博客搭建
+                    CentOS-7的Swap Space设置
                   </h3>
                 </a>
               </div>

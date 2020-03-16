@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-02-24T04:32:40.190Z</updated>
+    <updated>2020-03-16T09:46:48.816Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -10,6 +10,47 @@
     <logo>https://blog.lyw1024.online/images/avatar.png</logo>
     <icon>https://blog.lyw1024.online/favicon.ico</icon>
     <rights>All rights reserved 2020, 匿迹_lyw</rights>
+    <entry>
+        <title type="html"><![CDATA[数据库命名及设计规则]]></title>
+        <id>https://blog.lyw1024.online/post/shu-ju-ku-she-ji-gui-fan</id>
+        <link href="https://blog.lyw1024.online/post/shu-ju-ku-she-ji-gui-fan">
+        </link>
+        <updated>2020-03-14T08:31:20.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="数据库命名规范">数据库命名规范</h1>
+<h2 id="实体">实体：</h2>
+<p><strong>1</strong>.本文中仅指来源于产品文档描述的，包括项目，系统，模块，属性等。不包含程序编写中的概率，如：class，funtion，object 不属于本文描述中的实体。<br>
+<strong>2</strong>.<strong>英文表示使用单数描述</strong>，下文提到可使用复数时使用复数，其他情况一律使用单数。组合其他单词使用时部分工具报语法警告不必理会。</p>
+<h2 id="统一说明">统一说明：</h2>
+<p><strong>1</strong>.使用26个英文字母 (区分大小写) 和0-9的自然数 (一般不需要) 加下划线 ‘_’ 组成；<br>
+<strong>2</strong>.命名简洁明确，忽略英文语法；<br>
+<strong>3</strong>.注释明确规范，表述清楚，英文注释不可忽略英文语法错误；<br>
+<strong>4</strong>.多个单词用下划线 ‘_’ 分隔；<br>
+<strong>5</strong>.一个项目一个数据库，多个项目慎用同一个数据库；<br>
+<strong>6</strong>.非专有名词使用小写。专有名词或广泛认可的缩写可使用大写（日活： DAU）</p>
+<h2 id="库名">库名：</h2>
+<p><strong>$数据用途-$环境</strong><br>
+（例： 书法项目的测试环境库： calligraphy-test）</p>
+<h2 id="表名">表名：</h2>
+<p><strong>t_$系统_$实体</strong><br>
+（例： 账号系统登录表： t_account_auth）</p>
+<h2 id="视图">视图：</h2>
+<p><strong>v_$实体_$附加信息</strong><br>
+（例： 所有及格的学生： v_student_passed）</p>
+<h2 id="字段">字段：</h2>
+<p><strong>1</strong>.主键一律使用 <strong>数值型&quot;id&quot;</strong>；<br>
+数值型： int，unsgined int， bigint， unsgined bigint<br>
+<strong>2</strong>.<strong>不使用数据库关键字作为字段名</strong>；<br>
+<strong>3</strong>.<strong>不使用泛意义单词</strong>；<br>
+比如：用户系统中表1存储｛昵称，头像，自我描述｝，<br>
+不使用 t_user_info表示基本信息，而使用t_user_face/t_user_show表示数据为展示信息。<br>
+<strong>4</strong>.<strong>单条记录中存储多值使用复数</strong>，比如：</p>
+<h1 id="关系型数据库设计规则">关系型数据库设计规则</h1>
+<p>待补充</p>
+<h1 id="非关系型数据库设计规则">非关系型数据库设计规则</h1>
+<p>待补充</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CentOS-7的Swap Space设置]]></title>
         <id>https://blog.lyw1024.online/post/centos-7-de-swap-space-she-zhi</id>
