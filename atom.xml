@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-03-16T13:53:43.631Z</updated>
+    <updated>2020-03-16T14:13:12.496Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -82,7 +82,9 @@
 <strong>3</strong>.<strong>不使用泛意义单词</strong>；<br>
 比如：用户系统中表1存储｛昵称，头像，自我描述｝，<br>
 不使用 t_user_info表示基本信息，而使用t_user_face/t_user_show表示数据为展示信息。<br>
-<strong>4</strong>.<strong>单条记录中存储多值使用复数</strong>，比如：</p>
+<strong>4</strong>.<strong>单条记录中存储多值使用复数</strong>，比如：<br>
+<img src="http://res.lyw1024.online/blog/post/plural.png" alt="" loading="lazy"><br>
+<img src="http://res.lyw1024.online/blog/post/singular.png" alt="" loading="lazy"></p>
 <h1 id="关系型数据库设计规则">关系型数据库设计规则</h1>
 <p>待补充</p>
 <h1 id="非关系型数据库设计规则">非关系型数据库设计规则</h1>
