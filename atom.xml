@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-03-16T16:59:39.601Z</updated>
+    <updated>2020-03-20T14:56:28.306Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -11,16 +11,68 @@
     <icon>https://blog.lyw1024.online/favicon.ico</icon>
     <rights>All rights reserved 2020, 匿迹_lyw</rights>
     <entry>
+        <title type="html"><![CDATA[SpringBoot模块化开发(多模块)]]></title>
+        <id>https://blog.lyw1024.online/post/springboot-duo-mo-kuai</id>
+        <link href="https://blog.lyw1024.online/post/springboot-duo-mo-kuai">
+        </link>
+        <updated>2020-03-19T17:44:10.000Z</updated>
+        <summary type="html"><![CDATA[<p>本文阐述对SpringBoot模块化开发的理解。主要解决以下几个问题：什么是模块；为什么项目需要模块化；什么情况适合分模块；如何进行模块划分。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本文阐述对SpringBoot模块化开发的理解。主要解决以下几个问题：什么是模块；为什么项目需要模块化；什么情况适合分模块；如何进行模块划分。</p>
+<!-- more -->
+<h1 id="什么是模块">什么是模块</h1>
+<p>模块可以简单的理解为一个可以管理自己pom依赖的目录。所以分模块事实上也是分目录，与简单直接的分目录的区别只在于，模块是可以管理自身依赖的，所以模块具有可以单独编译的特性。注意，可以单独编译并不代表可以运行，很多时候只是编译成jar包，或者称之为库，供其他模块添加pom依赖。<br>
+maven常用的打包方式一般就是：jar，war，pom。<br>
+jar包分为2种，一种相当于库，一种相当于jre下的应用程序。<br>
+war包 供tomcat使用，可以简单的理解为tomcat下的应用程序。<br>
+pom则不会在这一级生成任何文件，只是作为母模块，可以理解为模块目录，用于包含其他模块。</p>
+<h1 id="为什么项目需要模块化">为什么项目需要模块化</h1>
+<ul>
+<li><strong>解耦和明确边界</strong>；<br>
+模块的划分一般又分层和分功能，其实理由和分目录类似，就是为了让各方面代码耦合度降低。</li>
+<li><strong>分散管理pom依赖</strong>；<br>
+分散管理pom中的依赖项，这是分目录所不能做到的，也是分模块专有的好出，在一个大项目中，各个模块管理自身的依赖，可以方便的处理多模块之中相同依赖的版本冲突，以及更剔除掉无效的依赖</li>
+<li><strong>增强复用</strong>。<br>
+增强复用在分层划分模块中，显而易见，服务器需要对C端和管理端服务的情况十分常见，分为多个项目会出现底层需要重复构建的问题。</li>
+</ul>
+<h1 id="什么情况适合分模块">什么情况适合分模块</h1>
+<p>一般来说，软件工程方法都不是普遍适用，分模块一样。</p>
+<ul>
+<li>同数据库<br>
+很明显，软件工程永远拒绝底层(数据层)的重复构建</li>
+<li>同业务系统<br>
+C端和管理端这种相互之间具有数据驱动的业务系统，更适合使用分模块</li>
+<li>无直接关系没必要分模块<br>
+类似springcloud演示项目，官方会将一个样例打包为一个多模块项目用于展示，而实际开发中，没有必要将很多不需要开发的项目作为模块项目添加。</li>
+</ul>
+<h1 id="如何进行模块划分">如何进行模块划分</h1>
+<p>此处分享我的划分原则<br>
+先说结论，在实际生产中大多数时候按层划分和按功能划分是混合使用的。</p>
+<ul>
+<li>按层划分：<br>
+在springboot项目中，可以按 model，mapper，service，web等方式将各层分到不同模块中。</li>
+<li>按业务功能划分：<br>
+按业务功能划分是复杂业务项目开发中最会被提及喝考虑的。</li>
+</ul>
+<h2 id="正如开头提到的哪样混合使用">正如开头提到的哪样，混合使用：</h2>
+<p><strong>1.</strong> 按层划分为model，mapper，service，web(controller) 个模块。<br>
+<strong>2.</strong> model，mapper不再划分模块，通过分目录的方式来分类代码。<br>
+<strong>3.</strong> service层 的划分主要依赖于业务的界限，<br>
+但是此处会有一些公共功能(队列消费，定时任务)会独立出来<br>
+<strong>4.</strong> web(controller) 基本只是与前端交互的代码，按业务功能划分即可。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Git版本管理规则]]></title>
         <id>https://blog.lyw1024.online/post/git-ban-ben-guan-li-gui-ze</id>
         <link href="https://blog.lyw1024.online/post/git-ban-ben-guan-li-gui-ze">
         </link>
         <updated>2020-03-16T13:45:35.000Z</updated>
         <summary type="html"><![CDATA[<p>本文仅为本人及本人团队使用git版本控制的使用规则，并非Git唯一使用方案。Git本身并不具有固定正确的用法，主要依赖使用者理解版本控制，分支，变更节点等核心思想，自行定制使用方案。如读者对本方案有异议或愿意进行一些交流，可联系我。<br>
-由于本人开发的部分产品会分为不同渠道有时候会有功能上的细微不同，可能会需要输出多份互斥的版本，所以，与github普遍适用的单个版本输出的模式有细微区别，<strong>切勿多套规则同时使用</strong>。</p>
+由于本人开发的部分产品会分为不同渠道有时候会有功能上的细微不同，会有输出多份互斥的版本的需求，所以，与广为流行的的git-flow模型有细微区别，<strong>切勿多套规则同时使用</strong>。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>本文仅为本人及本人团队使用git版本控制的使用规则，并非Git唯一使用方案。Git本身并不具有固定正确的用法，主要依赖使用者理解版本控制，分支，变更节点等核心思想，自行定制使用方案。如读者对本方案有异议或愿意进行一些交流，可联系我。<br>
-由于本人开发的部分产品会分为不同渠道有时候会有功能上的细微不同，可能会需要输出多份互斥的版本，所以，与github普遍适用的单个版本输出的模式有细微区别，<strong>切勿多套规则同时使用</strong>。</p>
+由于本人开发的部分产品会分为不同渠道有时候会有功能上的细微不同，会有输出多份互斥的版本的需求，所以，与广为流行的的git-flow模型有细微区别，<strong>切勿多套规则同时使用</strong>。</p>
 <!-- more -->
 <h1 id="分支类型">分支类型</h1>
 <h2 id="master分支">Master分支：</h2>
