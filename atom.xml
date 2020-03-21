@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-03-20T14:56:28.306Z</updated>
+    <updated>2020-03-21T16:42:02.665Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -10,6 +10,47 @@
     <logo>https://blog.lyw1024.online/images/avatar.png</logo>
     <icon>https://blog.lyw1024.online/favicon.ico</icon>
     <rights>All rights reserved 2020, 匿迹_lyw</rights>
+    <entry>
+        <title type="html"><![CDATA[CentOS常用操作记录]]></title>
+        <id>https://blog.lyw1024.online/post/centos-chang-yong-cao-zuo-ji-lu</id>
+        <link href="https://blog.lyw1024.online/post/centos-chang-yong-cao-zuo-ji-lu">
+        </link>
+        <updated>2020-03-21T16:06:54.000Z</updated>
+        <summary type="html"><![CDATA[<p>本文记录一些常用且简单的操作。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本文记录一些常用且简单的操作。</p>
+<!-- more -->
+<h1 id="软件源内核升级">软件源&amp;内核升级</h1>
+<ul>
+<li>yum update 用于升级软件源&amp;内核</li>
+<li>yum upgrade 用于升级软件源</li>
+</ul>
+<p>当进行内核升级时，系统会出现多个内核版本。<br>
+而正常情况下上，我们并不需要多内核，可以通过以下步骤删除多余内核。<br>
+<strong>1</strong>. uname -r #查询当前使用的系统<br>
+<strong>2</strong>. rpm -qa | grep kernel # rpm(Red-Hat Package Manager)<br>
+<strong>3</strong>. yum remove 你要删除的内核 #把老版本的内核remove，千万不要把正在使用的内核删掉<br>
+<strong>4</strong>. grub2-mkconfig -o /boot/grub2/grub.cfg #重新编译引导<br>
+<strong>5</strong>. reboot #重启</p>
+<h1 id="防火墙firewall">防火墙(firewall)</h1>
+<ul>
+<li>重新载入：firewall-cmd --reload<br>
+<em>开放/关闭端口后需重新载入才可生效！</em></li>
+<li>开放：firewall-cmd --zone=public --add-port=80/tcp --permanent</li>
+<li>关闭：firewall-cmd --zone=public --remove-port=80/tcp --permanent</li>
+<li>查看：firewall-cmd --zone=public --list-ports</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[容器化和Docker]]></title>
+        <id>https://blog.lyw1024.online/post/rong-qi-hua-he-docker</id>
+        <link href="https://blog.lyw1024.online/post/rong-qi-hua-he-docker">
+        </link>
+        <updated>2020-03-21T08:08:23.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[SpringBoot模块化开发(多模块)]]></title>
         <id>https://blog.lyw1024.online/post/springboot-duo-mo-kuai</id>
@@ -392,107 +433,6 @@ git.7z打包的是Gridea/output/.git目录</p>
 8.为了保证每次添加新设备不会回档，工作进行完之后务必进行github-pages-storage推送。</p>
 </blockquote>
 <p>遗留问题：Gridea未对接文件服务，所以博文中插入图片会非常影响网站性能，目前暂用外链的方式来引用图片，留待以后解决</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[技术要点整理]]></title>
-        <id>https://blog.lyw1024.online/post/ji-zhu-yao-dian-zheng-li</id>
-        <link href="https://blog.lyw1024.online/post/ji-zhu-yao-dian-zheng-li">
-        </link>
-        <updated>2020-02-03T16:34:36.000Z</updated>
-        <summary type="html"><![CDATA[<p>博客刚刚搭建，先在此列出一些提纲，最初的文章将是对过去的总结。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>博客刚刚搭建，先在此列出一些提纲，最初的文章将是对过去的总结。</p>
-<!-- more -->
-<h2 id="基础技术篇">* 基础技术篇</h2>
-<h3 id="java-集合io-多线程">JAVA 集合，IO， 多线程</h3>
-<pre><code>源码解读，IO发展，NIO，Netty，多线程和单线程比较， 锁的使用，sap，线程数和cpu核心数测试优化
-</code></pre>
-<h3 id="java虚拟机">JAVA虚拟机</h3>
-<pre><code>类加载，内存管理，执行原理，调试工具
-</code></pre>
-<h3 id="python">Python</h3>
-<pre><code>python优势，process和greenlet
-</code></pre>
-<h3 id="mysql数据库">mysql数据库:</h3>
-<pre><code>二叉树 -&gt;红黑树 -&gt; 索引原理 -&gt; 数据库引擎 -&gt; 读写分离+集群模式+分表分库
-锁的使用，读写过程，事务执行，隔离级别， 注入攻击，  ORM产生原因，
-</code></pre>
-<h3 id="redis">redis:</h3>
-<pre><code>原理-&gt;搭建方式-&gt;常用结构和场景，
-持久化，单线程执行，redis6的多线程
-</code></pre>
-<h3 id="rabbitmq-kafka">rabbitMQ， kafka</h3>
-<pre><code>队列存在的意义，消息丢失和幂问题，任务队列和消息队列，
-</code></pre>
-<h3 id="分布式微服务面向服务编程">分布式，微服务，面向服务编程</h3>
-<pre><code>三者含义上的差别以及为何需要
-服务间通信的方式/优势/适用场景
-带来的新问题
-网络波动，必要服务失去响应，雪崩效应，服务间死锁，等问题的原理和解决思路
-分布式事务，二阶段提交和三阶段提交
-目前流行的解决方案
-</code></pre>
-<h2 id="常用框架篇">* 常用框架篇</h2>
-<h3 id="springboot">springboot</h3>
-<pre><code>springboot工作原理，处理时序图，基础运行starter及starter机制， logstash日志
-</code></pre>
-<h3 id="mybatis">mybatis</h3>
-<pre><code>mybatis-generator，xml，数据字段继承
-</code></pre>
-<h3 id="springcloud">springcloud</h3>
-<pre><code>微服务基本版(服务注册发现eruake+请求前门Zuul+熔断机制Hystrix)
-springcloud基础项目+Spring Cloud Starters +Spring Cloud Config
-服务注册发现eruake 和zookeeper的原理和比较
-Feign和zuul
-</code></pre>
-<h3 id="搜索服务-xapiansolres">搜索服务 Xapian，solr，es</h3>
-<pre><code>luncene的基本流程
-Xapian，solr，es 的区别，适用数据量级。
-</code></pre>
-<h3 id="elasticsearchlogstashkibana">Elasticsearch,Logstash,Kibana</h3>
-<pre><code>原理，流程，解决何种问题
-</code></pre>
-<p>###FireFly，Django， Flask， WSGI</p>
-<h2 id="实际项目篇">* 实际项目篇</h2>
-<h3 id="io密集计算密集但一致性要求稍低的游戏服务">IO密集，计算密集，但一致性要求稍低的游戏服务</h3>
-<pre><code>解耦两端数据的同步， 用户-&gt;服务-&gt;DB 两箭头取消互相等待。
-</code></pre>
-<h3 id="io密集一致性要求高-的电商服务">IO密集，一致性要求高 的电商服务</h3>
-<pre><code>同步操作和持久化，前端排队 用户-&gt;服务 之间架设队列，牺牲用户响应效率
-</code></pre>
-<h3 id="多端登录改造">多端登录改造</h3>
-<pre><code>oauth2.0 流程，多session处理
-</code></pre>
-<h2 id="技术及思路解读篇">* 技术及思路解读篇</h2>
-<h3 id="restful风格api">restful风格API</h3>
-<h3 id="面向接口编程">面向接口编程</h3>
-<h3 id="泛型编程">泛型编程</h3>
-<h3 id="微信支付支付宝支付">微信支付/支付宝支付</h3>
-<pre><code>支付流程，不同流程将会面临的问题
-</code></pre>
-<h3 id="e-mail发送">e-mail发送</h3>
-<h3 id="oss">OSS</h3>
-<pre><code>私有空间，STS授权访问
-</code></pre>
-<h3 id="ffmpeg">FFmpeg</h3>
-<pre><code>音视频处理
-</code></pre>
-<h3 id="短信发送">短信发送</h3>
-<h3 id="微信公众号推送">微信公众号推送</h3>
-<h2 id="规范篇">* 规范篇</h2>
-<h3 id="数据库设计规范">数据库设计规范</h3>
-<h3 id="git使用规范">git使用规范</h3>
-<h3 id="接口规范">接口规范</h3>
-<h3 id="编码规范">编码规范</h3>
-<h2 id="探索篇">* 探索篇</h2>
-<h3 id="暂未能解决的问题">暂未能解决的问题</h3>
-<pre><code>浏览器指纹，低频消耗验证码，
-</code></pre>
-<h2 id="算法篇">* 算法篇</h2>
-<pre><code>排序
-反射
-</code></pre>
 ]]></content>
     </entry>
 </feed>

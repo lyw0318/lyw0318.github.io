@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Hello Gridea | 匿迹_lyw</title>
+<title>CentOS常用操作记录 | 匿迹_lyw</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,15 +18,16 @@
 
 
 
-    <meta name="description" content="👏  欢迎使用 Gridea ！
-✍️  Gridea 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...
+    <meta name="description" content="本文记录一些常用且简单的操作。
 
-Github
-Gridea 主页
-示例网站
-特性👇
-📝  你可以使用最酷的 Markdo..." />
-    <meta name="keywords" content="Gridea" />
+软件源&amp;内核升级
+
+yum update 用于升级软件源&amp;内核
+yum upgrade 用于升级软件源
+
+当进行内核升级时，系统会出现多个内核版本。
+而正常情况下上，我们并不需要多内核，可以..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -98,45 +99,44 @@ Gridea 主页
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Hello Gridea</h2>
-            <div class="post-date">2018-12-12</div>
-            
-              <div class="feature-container" style="background-image: url('https://blog.lyw1024.online//post-images/hello-gridea.png')">
-              </div>
+            <h2 class="post-title">CentOS常用操作记录</h2>
+            <div class="post-date">2020-03-22</div>
             
             <div class="post-content" v-pre>
-              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+              <p>本文记录一些常用且简单的操作。</p>
 <!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+<h1 id="软件源内核升级">软件源&amp;内核升级</h1>
+<ul>
+<li>yum update 用于升级软件源&amp;内核</li>
+<li>yum upgrade 用于升级软件源</li>
+</ul>
+<p>当进行内核升级时，系统会出现多个内核版本。<br>
+而正常情况下上，我们并不需要多内核，可以通过以下步骤删除多余内核。<br>
+<strong>1</strong>. uname -r #查询当前使用的系统<br>
+<strong>2</strong>. rpm -qa | grep kernel # rpm(Red-Hat Package Manager)<br>
+<strong>3</strong>. yum remove 你要删除的内核 #把老版本的内核remove，千万不要把正在使用的内核删掉<br>
+<strong>4</strong>. grub2-mkconfig -o /boot/grub2/grub.cfg #重新编译引导<br>
+<strong>5</strong>. reboot #重启</p>
+<h1 id="防火墙firewall">防火墙(firewall)</h1>
+<ul>
+<li>重新载入：firewall-cmd --reload<br>
+<em>开放/关闭端口后需重新载入才可生效！</em></li>
+<li>开放：firewall-cmd --zone=public --add-port=80/tcp --permanent</li>
+<li>关闭：firewall-cmd --zone=public --remove-port=80/tcp --permanent</li>
+<li>查看：firewall-cmd --zone=public --list-ports</li>
+</ul>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://blog.lyw1024.online/tag/xzM3_bd6Y" class="tag">
-                    Gridea
-                  </a>
-                
-              </div>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.lyw1024.online/post/rong-qi-hua-he-docker">
+                  <h3 class="post-title">
+                    容器化和Docker
+                  </h3>
+                </a>
+              </div>
             
 
             
