@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://blog.lyw1024.online//favicon.ico?v=1586431864802">
+<link rel="shortcut icon" href="https://blog.lyw1024.online//favicon.ico?v=1586433339706">
 <link rel="stylesheet" href="https://blog.lyw1024.online//styles/main.css">
 
 
@@ -24,8 +24,8 @@ Java/SpringBoot项目
 
 统一说明：
 1.使用26个英文字母 (区分大小写) 和0-9的自然数 (一般不需要) 加下划线 ‘_’ 组成；
-2.命名简洁明确，忽略英文语法；
-3.注释明确规范，表述清楚，英文注释不可忽..." />
+2.命名简洁明确，可忽略英文语法错误；
+3.注释明确规范，表述清楚，英文注释..." />
     <meta name="keywords" content="规则" />
   </head>
   <body>
@@ -35,7 +35,7 @@ Java/SpringBoot项目
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://blog.lyw1024.online/">
-        <img src="https://blog.lyw1024.online//images/avatar.png?v=1586431864802" class="site-logo">
+        <img src="https://blog.lyw1024.online//images/avatar.png?v=1586433339706" class="site-logo">
         <h1 class="site-title">匿迹_lyw</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -108,7 +108,7 @@ Java/SpringBoot项目
 <ul>
 <li>统一说明：<br>
 <strong>1</strong>.使用26个英文字母 (区分大小写) 和0-9的自然数 (一般不需要) 加下划线 ‘_’ 组成；<br>
-<strong>2</strong>.命名简洁明确，忽略英文语法；<br>
+<strong>2</strong>.命名简洁明确，可忽略英文语法错误；<br>
 <strong>3</strong>.注释明确规范，表述清楚，英文注释不可忽略英文语法错误；<br>
 <strong>4</strong>.多个单词用驼峰式命名；<br>
 <strong>5</strong>.不单独使用泛意义单词，<s>i，j，k，obj，str，newStr，newObj</s></li>
@@ -121,16 +121,16 @@ Java/SpringBoot项目
 <ul>
 <li>统一说明：<br>
 <strong>1</strong>.不使用无持久化记录的控制台输出；<br>
-<strong>2</strong>.for循环中尽量减少低等级(debug，info)的打印信息；<br>
+<strong>2</strong>.for循环中尽量不写低等级(debug，info)的打印信息；<br>
 <strong>3</strong>.日志需适当添加文字说明，不直接log.info(obj.toString())；</li>
 <li>DEBUG等级:<br>
 测试环境保留，生产环境关闭，业务进行中数据实时状态，辅助反馈bug的分析解决，试运营阶段会处于打开状态。</li>
 <li>INFO等级:<br>
 生产环境中会被保留的日志，记录服务程序和业务的实时状态，和记录数据变化的关键记录。</li>
 <li>WARN等级:<br>
-不影响程序或者业务继续进行，但出现正常预期之外情况的记录，比如：限量抢购中，下单成功但未能抢到，选择使用warn级打印。</li>
+不影响程序或者业务继续进行，但出现有预期和后续处理方案的异常情况的记录，比如：限量抢购中，下单成功但未能抢到，选择使用warn级打印。</li>
 <li>ERROR等级:<br>
-出现会影响程序或业务继续进行的错误，oauth2.0流程中，资源服务无法连接上认证服务。</li>
+出现会影响程序或业务继续进行的错误，如oauth2.0流程中，资源服务无法连接上认证服务。</li>
 </ul>
 
             </div>
