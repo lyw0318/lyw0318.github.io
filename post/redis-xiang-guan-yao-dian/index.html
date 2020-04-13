@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | 匿迹_lyw</title>
+<title>Redis相关要点 | 匿迹_lyw</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,7 +18,23 @@
 
 
 
-    <meta name="description" content="温故而知新">
+    <meta name="description" content="介绍redis原理和特点。
+
+单线程设计
+
+低io高cpu，所以redis命令执行设计为单线程的
+为什么6.0之后的版本出现多线程
+
+key的过期和淘汰机制
+持久化机制
+集群方式
+数据结构
+redis事务
+redis广播
+常用场景
+
+分布式..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -89,22 +105,53 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">Redis相关要点</h2>
+            <div class="post-date">2020-02-21</div>
             
-              <a class="tag" href="https://blog.lyw1024.online/tag/wdp-TO8U6/">实践</a>
+              <div class="feature-container" style="background-image: url('http://res.lyw1024.online/blog/covers/redis.jpg')">
+              </div>
             
-              <a class="tag" href="https://blog.lyw1024.online/tag/_n-AqWHZt/">笔记</a>
+            <div class="post-content" v-pre>
+              <p>介绍redis原理和特点。</p>
+<!-- more -->
+<h2 id="单线程设计">单线程设计</h2>
+<ul>
+<li>低io高cpu，所以redis命令执行设计为单线程的</li>
+<li>为什么6.0之后的版本出现多线程</li>
+</ul>
+<h2 id="key的过期和淘汰机制">key的过期和淘汰机制</h2>
+<h2 id="持久化机制">持久化机制</h2>
+<h2 id="集群方式">集群方式</h2>
+<h2 id="数据结构">数据结构</h2>
+<h2 id="redis事务">redis事务</h2>
+<h2 id="redis广播">redis广播</h2>
+<h2 id="常用场景">常用场景</h2>
+<ul>
+<li>分布式锁</li>
+<li>实时排行</li>
+<li>抢购/秒杀</li>
+<li>session存储</li>
+</ul>
+<h2 id="性能参数">性能参数</h2>
+
+            </div>
             
-              <a class="tag" href="https://blog.lyw1024.online/tag/b_p5ejpH-/">理解</a>
             
-              <a class="tag" href="https://blog.lyw1024.online/tag/lzDTlX4XI/">方案</a>
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.lyw1024.online/post/mysql-shu-ju-ku/">
+                  <h3 class="post-title">
+                    MySQL理解要点
+                  </h3>
+                </a>
+              </div>
             
-              <a class="tag" href="https://blog.lyw1024.online/tag/C7bEy3vFp/">规则</a>
+
             
-              <a class="tag" href="https://blog.lyw1024.online/tag/Y6bGjhBqa/">目录</a>
-            
+
           </div>
+
         </div>
       </div>
     </div>
