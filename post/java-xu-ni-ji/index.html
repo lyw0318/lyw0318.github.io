@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>方案 | 匿迹_lyw</title>
+<title>深入理解JAVA虚拟机 | 匿迹_lyw</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,7 +18,16 @@
 
 
 
-    <meta name="description" content="温故而知新">
+    <meta name="description" content="
+1. JDK构成
+
+
+JVM(Java Virtual Machine)：
+java虚拟机，java程序的核心执行器。
+JRE(Java Runtime Environment)：
+java运行时环境，JVM+java的核心类库
+JDK(..." />
+    <meta name="keywords" content="原理" />
   </head>
   <body>
     <div id="app" class="main">
@@ -89,75 +98,62 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: 方案</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://blog.lyw1024.online/post/springboot-duo-mo-kuai/">
-                  <h2 class="post-title">SpringBoot模块化开发(多模块)</h2>
-                </a>
-                <div class="post-date">
-                  2020-03-20
-                </div>
-                <div class="post-abstract">
-                  <p>本文阐述对SpringBoot模块化开发的理解。主要解决以下几个问题：什么是模块；为什么项目需要模块化；什么情况适合分模块；如何进行模块划分。</p>
+          <div class="post-detail">
+            <h2 class="post-title">深入理解JAVA虚拟机</h2>
+            <div class="post-date">2020-02-04</div>
+            
+              <div class="feature-container" style="background-image: url('http://res.lyw1024.online/blog/covers/java-jvm.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <!-- more -->
+<h2 id="1-jdk构成">1. JDK构成</h2>
+<blockquote>
+<p><img src="http://res.lyw1024.online/blog/post/2/1.jpg" alt="" loading="lazy"><br>
+<strong>JVM</strong>(Java Virtual Machine)：<br>
+java虚拟机，java程序的核心执行器。<br>
+<strong>JRE</strong>(Java Runtime Environment)：<br>
+java运行时环境，JVM+java的核心类库<br>
+<strong>JDK</strong>(Java Development Kit)：<br>
+java开发工具包，JRE+java开发工具</p>
+</blockquote>
+<h2 id="2-jvm构成">2. JVM构成</h2>
+<blockquote>
+<p><img src="http://res.lyw1024.online/blog/post/2/jvm2.png" alt="" loading="lazy"><br>
+1.类加载器（Class Loader）：加载类文件到内存。<br>
+2.运行时数据区（Runtime Data Area）：虚拟机内存分部。<br>
+3.执行引擎（Execution Engine）：也叫解释器，负责解释命令，交由操作系统执行。<br>
+4.本地接口（Native Interface）： 调用其他语言库的或方法的出口。</p>
+</blockquote>
+<h3 id="21-jvm内存管理">2.1. JVM内存管理</h3>
+<p>内存管理是JVM对运行时数据区进行管理的子系统。因为可用内存是有限的，所以回收复用内存十分必要。</p>
+<h3 id="22-jvm类加载子系统">2.2. JVM类加载子系统</h3>
+<h3 id="23-jvm执行引擎">2.3. JVM执行引擎</h3>
 
-                </div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.lyw1024.online/tag/_S-8XoBM8/" class="tag">
+                    原理
+                  </a>
+                
               </div>
-              
-                <a class="right" href="https://blog.lyw1024.online/post/springboot-duo-mo-kuai/">
-                  <div class="feature-container" style="background-image: url('http://res.lyw1024.online/blog/covers/springboot.jpg')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://blog.lyw1024.online/post/a-li-yun-oss-jie-ru-andguan-li-fang-an/">
-                  <h2 class="post-title">阿里云OSS接入&amp;管理方案</h2>
-                </a>
-                <div class="post-date">
-                  2020-02-08
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-                <a class="right" href="https://blog.lyw1024.online/post/a-li-yun-oss-jie-ru-andguan-li-fang-an/">
-                  <div class="feature-container" style="background-image: url('http://res.lyw1024.online/blog/covers/ali-oss.jpg')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
                 <a href="https://blog.lyw1024.online/post/jing-tai-bo-ke-da-jian/">
-                  <h2 class="post-title">静态博客搭建</h2>
+                  <h3 class="post-title">
+                    静态博客搭建
+                  </h3>
                 </a>
-                <div class="post-date">
-                  2020-02-04
-                </div>
-                <div class="post-abstract">
-                  <p><em>本文简单介绍本博客的搭建方案说明。其本质是Github Pages，使用Gridea来解决样式维护和文章编写体验差的问题。</em></p>
-
-                </div>
               </div>
-              
-                <a class="right" href="https://blog.lyw1024.online/post/jing-tai-bo-ke-da-jian/">
-                  <div class="feature-container" style="background-image: url('http://res.lyw1024.online/blog/covers/gridea.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+            
+
+          </div>
 
         </div>
       </div>
