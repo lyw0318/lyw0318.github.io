@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2021-07-27T08:52:05.312Z</updated>
+    <updated>2021-07-27T09:05:24.058Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2021, 匿迹_lyw</rights>
     <entry>
         <title type="html"><![CDATA[CentOS常用操作记录]]></title>
-        <id>https://blog.lyw1024.online/post/centos-chang-yong-cao-zuo-ji-lu</id>
-        <link href="https://blog.lyw1024.online/post/centos-chang-yong-cao-zuo-ji-lu">
+        <id>https://blog.lyw1024.online/post/centos-chang-yong-cao-zuo-ji-lu/</id>
+        <link href="https://blog.lyw1024.online/post/centos-chang-yong-cao-zuo-ji-lu/">
         </link>
         <updated>2020-03-21T16:06:54.000Z</updated>
         <summary type="html"><![CDATA[<p>本文记录一些常用且简单的操作。</p>
@@ -44,8 +44,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[容器化和Docker]]></title>
-        <id>https://blog.lyw1024.online/post/rong-qi-hua-he-docker</id>
-        <link href="https://blog.lyw1024.online/post/rong-qi-hua-he-docker">
+        <id>https://blog.lyw1024.online/post/rong-qi-hua-he-docker/</id>
+        <link href="https://blog.lyw1024.online/post/rong-qi-hua-he-docker/">
         </link>
         <updated>2020-03-21T08:08:23.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -53,8 +53,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[SpringBoot模块化开发(多模块)]]></title>
-        <id>https://blog.lyw1024.online/post/springboot-duo-mo-kuai</id>
-        <link href="https://blog.lyw1024.online/post/springboot-duo-mo-kuai">
+        <id>https://blog.lyw1024.online/post/springboot-duo-mo-kuai/</id>
+        <link href="https://blog.lyw1024.online/post/springboot-duo-mo-kuai/">
         </link>
         <updated>2020-03-19T17:44:10.000Z</updated>
         <summary type="html"><![CDATA[<p>本文阐述对SpringBoot模块化开发的理解。主要解决以下几个问题：什么是模块；为什么项目需要模块化；什么情况适合分模块；如何进行模块划分。</p>
@@ -105,8 +105,8 @@ C端和管理端这种相互之间具有数据驱动的业务系统，更适合�
     </entry>
     <entry>
         <title type="html"><![CDATA[Git版本管理规则]]></title>
-        <id>https://blog.lyw1024.online/post/git-ban-ben-guan-li-gui-ze</id>
-        <link href="https://blog.lyw1024.online/post/git-ban-ben-guan-li-gui-ze">
+        <id>https://blog.lyw1024.online/post/git-ban-ben-guan-li-gui-ze/</id>
+        <link href="https://blog.lyw1024.online/post/git-ban-ben-guan-li-gui-ze/">
         </link>
         <updated>2020-03-16T13:45:35.000Z</updated>
         <summary type="html"><![CDATA[<p>本文仅为本人及本人团队使用git版本控制的使用规则，并非Git唯一使用方案。Git本身并不具有固定正确的用法，主要依赖使用者理解版本控制，分支，变更节点等核心思想，自行定制使用方案。如读者对本方案有异议或愿意进行一些交流，可联系我。<br>
@@ -153,8 +153,8 @@ C端和管理端这种相互之间具有数据驱动的业务系统，更适合�
     </entry>
     <entry>
         <title type="html"><![CDATA[程序开发命名及日志规则]]></title>
-        <id>https://blog.lyw1024.online/post/kai-fa-gui-fan</id>
-        <link href="https://blog.lyw1024.online/post/kai-fa-gui-fan">
+        <id>https://blog.lyw1024.online/post/kai-fa-gui-fan/</id>
+        <link href="https://blog.lyw1024.online/post/kai-fa-gui-fan/">
         </link>
         <updated>2020-03-14T10:02:31.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -191,8 +191,8 @@ C端和管理端这种相互之间具有数据驱动的业务系统，更适合�
     </entry>
     <entry>
         <title type="html"><![CDATA[数据库命名及设计规则]]></title>
-        <id>https://blog.lyw1024.online/post/shu-ju-ku-she-ji-gui-fan</id>
-        <link href="https://blog.lyw1024.online/post/shu-ju-ku-she-ji-gui-fan">
+        <id>https://blog.lyw1024.online/post/shu-ju-ku-she-ji-gui-fan/</id>
+        <link href="https://blog.lyw1024.online/post/shu-ju-ku-she-ji-gui-fan/">
         </link>
         <updated>2020-03-14T08:31:20.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -234,8 +234,8 @@ C端和管理端这种相互之间具有数据驱动的业务系统，更适合�
     </entry>
     <entry>
         <title type="html"><![CDATA[CentOS-7的Swap Space设置]]></title>
-        <id>https://blog.lyw1024.online/post/centos-7-de-swap-space-she-zhi</id>
-        <link href="https://blog.lyw1024.online/post/centos-7-de-swap-space-she-zhi">
+        <id>https://blog.lyw1024.online/post/centos-7-de-swap-space-she-zhi/</id>
+        <link href="https://blog.lyw1024.online/post/centos-7-de-swap-space-she-zhi/">
         </link>
         <updated>2020-02-16T16:22:39.000Z</updated>
         <summary type="html"><![CDATA[<p>今天自己想跑一个java程序，但是由于测试机器为单核2G的配置，压力甚大，于是决定通过增加虚拟内存的方式来临时解决。</p>
@@ -308,8 +308,8 @@ vm.swappiness=60<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[前端实践笔记]]></title>
-        <id>https://blog.lyw1024.online/post/qian-duan-shi-jian-bi-ji</id>
-        <link href="https://blog.lyw1024.online/post/qian-duan-shi-jian-bi-ji">
+        <id>https://blog.lyw1024.online/post/qian-duan-shi-jian-bi-ji/</id>
+        <link href="https://blog.lyw1024.online/post/qian-duan-shi-jian-bi-ji/">
         </link>
         <updated>2020-02-10T11:43:55.000Z</updated>
         <summary type="html"><![CDATA[<p>作为后端开发，工作上未必会用到前端东西。但是自己实践一些想法或者技术时，难免会需要做一些前端展示。本文将整理记录一些我认为比较重要的东西，由于主要是协助后端的功能完整，所以将以服务于实践为主。</p>
@@ -342,8 +342,8 @@ vm.swappiness=60<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[IDEA搭建Python/Django开发环境]]></title>
-        <id>https://blog.lyw1024.online/post/idea-da-jian-pythondjango-kai-fa-huan-jing</id>
-        <link href="https://blog.lyw1024.online/post/idea-da-jian-pythondjango-kai-fa-huan-jing">
+        <id>https://blog.lyw1024.online/post/idea-da-jian-pythondjango-kai-fa-huan-jing/</id>
+        <link href="https://blog.lyw1024.online/post/idea-da-jian-pythondjango-kai-fa-huan-jing/">
         </link>
         <updated>2020-02-08T14:50:03.000Z</updated>
         <summary type="html"><![CDATA[<p>由于本人需要开发java和python，所以选择了对两种开发支持都较好的IDEA。本文记录IDEA的python开发设置。</p>
@@ -388,8 +388,8 @@ window我们不做过多深入，简单提升当前用户权限为完全控制</
     </entry>
     <entry>
         <title type="html"><![CDATA[静态博客搭建]]></title>
-        <id>https://blog.lyw1024.online/post/jing-tai-bo-ke-da-jian</id>
-        <link href="https://blog.lyw1024.online/post/jing-tai-bo-ke-da-jian">
+        <id>https://blog.lyw1024.online/post/jing-tai-bo-ke-da-jian/</id>
+        <link href="https://blog.lyw1024.online/post/jing-tai-bo-ke-da-jian/">
         </link>
         <updated>2020-02-04T11:20:45.000Z</updated>
         <summary type="html"><![CDATA[<p><em>本文简单介绍本博客的搭建方案说明。其本质是Github Pages，使用Gridea来解决样式维护和文章编写体验差的问题。</em></p>
