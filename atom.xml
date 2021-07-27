@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2020-03-21T17:02:04.848Z</updated>
+    <updated>2021-07-27T08:52:05.312Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://blog.lyw1024.online/images/avatar.png</logo>
     <icon>https://blog.lyw1024.online/favicon.ico</icon>
-    <rights>All rights reserved 2020, 匿迹_lyw</rights>
+    <rights>All rights reserved 2021, 匿迹_lyw</rights>
     <entry>
         <title type="html"><![CDATA[CentOS常用操作记录]]></title>
         <id>https://blog.lyw1024.online/post/centos-chang-yong-cao-zuo-ji-lu</id>
