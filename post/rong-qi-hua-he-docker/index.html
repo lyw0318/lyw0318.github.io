@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://blog.lyw1024.online//favicon.ico?v=1627376721228">
+<link rel="shortcut icon" href="https://blog.lyw1024.online//favicon.ico?v=1627377844917">
 <link rel="stylesheet" href="https://blog.lyw1024.online//styles/main.css">
 
 
@@ -19,7 +19,12 @@
 
 
     <meta name="description" content="
-" />
+查看docker详细信息
+docker info
+获取当前节点所有容器
+docker ps -a
+管理容器生命周期
+docker [start|stop|restart] &lt;containerID|containerName&gt;..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -29,7 +34,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://blog.lyw1024.online/">
-        <img src="https://blog.lyw1024.online//images/avatar.png?v=1627376721228" class="site-logo">
+        <img src="https://blog.lyw1024.online//images/avatar.png?v=1627377844917" class="site-logo">
         <h1 class="site-title">匿迹_lyw</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -96,6 +101,26 @@
             
             <div class="post-content" v-pre>
               <!-- more -->
+<p>查看docker详细信息<br>
+docker info</p>
+<p>获取当前节点所有容器<br>
+docker ps -a</p>
+<p>管理容器生命周期<br>
+docker [start|stop|restart] &lt;containerID|containerName&gt;</p>
+<p>查看容器日志<br>
+docker logs &lt;containerID|containerName&gt;</p>
+<p>查看容器详细信息<br>
+docker inspect [containerID|imageID]</p>
+<p>进入容器<br>
+docker exec -it &lt;containerID|containerName&gt; /bin/sh</p>
+<p>删除容器<br>
+docker rm -f &lt;containerID|containerName&gt;</p>
+<p>删除镜像<br>
+docker rmi -f &lt;imageID|imageName:tag&gt;</p>
+<p>查看正在运行的容器资源使用情况<br>
+docker stats &lt;containerID|containerName&gt;</p>
+<p>显示容器中正在运行的进程<br>
+docker top &lt;containerID|containerName&gt;</p>
 
             </div>
             

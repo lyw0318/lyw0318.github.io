@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.lyw1024.online/</id>
     <title>匿迹_lyw</title>
-    <updated>2021-07-27T09:05:24.058Z</updated>
+    <updated>2021-07-27T09:24:35.967Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.lyw1024.online/"/>
     <link rel="self" href="https://blog.lyw1024.online/atom.xml"/>
@@ -49,6 +49,26 @@
         </link>
         <updated>2020-03-21T08:08:23.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
+<p>查看docker详细信息<br>
+docker info</p>
+<p>获取当前节点所有容器<br>
+docker ps -a</p>
+<p>管理容器生命周期<br>
+docker [start|stop|restart] &lt;containerID|containerName&gt;</p>
+<p>查看容器日志<br>
+docker logs &lt;containerID|containerName&gt;</p>
+<p>查看容器详细信息<br>
+docker inspect [containerID|imageID]</p>
+<p>进入容器<br>
+docker exec -it &lt;containerID|containerName&gt; /bin/sh</p>
+<p>删除容器<br>
+docker rm -f &lt;containerID|containerName&gt;</p>
+<p>删除镜像<br>
+docker rmi -f &lt;imageID|imageName:tag&gt;</p>
+<p>查看正在运行的容器资源使用情况<br>
+docker stats &lt;containerID|containerName&gt;</p>
+<p>显示容器中正在运行的进程<br>
+docker top &lt;containerID|containerName&gt;</p>
 ]]></content>
     </entry>
     <entry>
